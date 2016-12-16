@@ -1,6 +1,17 @@
 var boxNumbersClicked = [];
 
 function clickBox(boxNumber) {
+  if (boxNumber === 1) {
+    document["body"].style["background-color"] = "yellow";
+    document.getElementById("message").innerHTML = "Morning";
+  } else if (boxNumber === 2) {
+    document.body.style["background-color"] = "orange";
+    document.getElementById("message").innerHTML = "Afternoon";
+  } else if (boxNumber === 3) {
+    document.body.style["background-color"] = "black";
+    document.getElementById("message").innerHTML = "Evening";
+  }
+
   boxNumbersClicked.push(boxNumber);
   
   var didClickBoxOne = boxNumbersClicked.indexOf(1) !== -1;
